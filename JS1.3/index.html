@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yummy darkmode</title>
+</head>
+<style>
+p{
+    color: blue;
+}
+
+.dark-mode {
+    background-color: black;
+    font-family: papyrus;
+}
+
+.dark-mode p{
+    color: orange;
+}
+</style>
+<body>
+    <button onclick="toggleddarkmode()">Toggle dark mode</button>
+    <p>
+        This is a test.
+    </p>
+    <br>
+    <p>
+        Another piece of text.
+    </p>
+    <br>
+    <p>
+        Testing Text.
+    </p>
+</body>
+<script>
+
+    function toggleddarkmode(){
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+        let r = Math.floor(Math.random()* 360);
+        element.style.background = `hsl(${r}, 100%, 50%)`;
+    }
+    let huidigeTijd = new Date()
+
+    if(huidigeTijd.getHours() > 19){
+        var element = document.body;
+    element.classList.toggle("dark-mode");
+
+    }
+</script>
+</html>
